@@ -12,10 +12,14 @@ At the beginning, the user is asked to introduce the PIN of the account(2 hardco
 
 
 ![image](https://user-images.githubusercontent.com/78145760/193337320-6cb7cba5-f3eb-4000-aa0f-6ee65dde7e6d.png)
+
+
 After you intput the right PIN, you are prompted to a menu from where you can chose which which transaction you want to do
 
 
 ![image](https://user-images.githubusercontent.com/78145760/193337811-7e28f8f3-104a-4c11-9ad6-a650588605f0.png)
+
+
 When you're done, you can choose *"n"*, when the question "Do you want to do another transaction?" appears
 
 
