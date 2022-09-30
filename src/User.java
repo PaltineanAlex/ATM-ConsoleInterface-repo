@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class User {
     private String name;
@@ -42,5 +43,32 @@ public class User {
         System.out.println("2. Deposit");
         System.out.println("3. CheckBalance");
         System.out.println("4. Exit account");
+    }
+
+    public void exitAccount() {
+        System.out.println("Please remove the card....");
+        System.out.println("Have a good day!");
+    }
+
+    public double checkBalance(double value) {
+        return value;
+    }
+
+    public void deposit(double valueAdded, double currentBalance) {
+        System.out.println("How much money do you want do deposit:");
+        Scanner in = new Scanner(System.in);
+        valueAdded = in.nextInt();
+        currentBalance += valueAdded;
+    }
+
+    public void withdraw(double valueWithdrawn, double currentBalance) {
+        System.out.println("How much money do you want to withdraw:");
+        Scanner in = new Scanner(System.in);
+        valueWithdrawn = in.nextDouble();
+        if(valueWithdrawn <= currentBalance){
+            currentBalance -= valueWithdrawn;
+        }else{
+            System.out.println("You don't have enough funds to withdraw the requested amount.");
+        }
     }
 }
