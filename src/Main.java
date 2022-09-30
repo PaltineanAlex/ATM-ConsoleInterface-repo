@@ -31,7 +31,7 @@ public class Main {
                     System.out.println("Do you want to do another transaction?(y/n)");
                     char answer = input.next().charAt(0);
                     if (answer == 'n') {
-                        u1.exitAccount();
+                        u2.exitAccount();
                         state = false;
                     }
                 }while(state == true);

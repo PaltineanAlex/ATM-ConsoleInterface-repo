@@ -59,6 +59,7 @@ public class User {
         Scanner in = new Scanner(System.in);
         double valueAdded = in.nextInt();
         currentBalance += valueAdded;
+        setBalance(currentBalance);
     }
 
     public void withdraw(double currentBalance) {
@@ -67,6 +68,7 @@ public class User {
         double valueWithdrawn = in.nextDouble();
         if(valueWithdrawn <= currentBalance){
             currentBalance -= valueWithdrawn;
+            setBalance(currentBalance);
         }else{
             System.out.println("You don't have enough funds to withdraw the requested amount.");
         }
