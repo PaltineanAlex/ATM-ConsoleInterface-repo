@@ -50,25 +50,40 @@ public class User {
         System.out.println("Have a good day!");
     }
 
-    public double checkBalance(double value) {
-        return value;
+    public void checkBalance(double currentValue) {
+        System.out.println("Your current balance is: " + currentValue);
     }
 
-    public void deposit(double valueAdded, double currentBalance) {
+    public void deposit(double currentBalance) {
         System.out.println("How much money do you want do deposit:");
         Scanner in = new Scanner(System.in);
-        valueAdded = in.nextInt();
+        double valueAdded = in.nextInt();
         currentBalance += valueAdded;
     }
 
-    public void withdraw(double valueWithdrawn, double currentBalance) {
+    public void withdraw(double currentBalance) {
         System.out.println("How much money do you want to withdraw:");
         Scanner in = new Scanner(System.in);
-        valueWithdrawn = in.nextDouble();
+        double valueWithdrawn = in.nextDouble();
         if(valueWithdrawn <= currentBalance){
             currentBalance -= valueWithdrawn;
         }else{
             System.out.println("You don't have enough funds to withdraw the requested amount.");
+        }
+    }
+
+    public void doAnotherTransaction(){
+        System.out.println("Do you want to do another transaction?(y/n) ");
+        Scanner in = new Scanner(System.in);
+        char answer = in.next().charAt(0);
+        boolean state = true;
+        while(state == true){
+            if(answer == 'y'){
+                continue;
+            }else if(answer == 'n'){
+                exitAccount();
+                state = false;
+            }
         }
     }
 }
