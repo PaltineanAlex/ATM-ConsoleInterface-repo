@@ -37,12 +37,13 @@ public class User implements Serializable {
     }
 
     public void optionPrompt(String name){
-        System.out.println("Hello "+ name + ", welcome to your account!");
-        System.out.println("===================================================");
-        System.out.println("Choose the number for the operation you want to do:");
-        System.out.println("1. Withdraw");
-        System.out.println("2. Deposit");
-        System.out.println("3. CheckBalance");
+        System.out.printf("""
+        Hello %s, welcome to your account!
+        ===================================================
+        Choose the number for the operation you want to do:
+        1. Withdraw
+        2. Deposit
+        3. CheckBalance""", name);
     }
 
     public void exitAccount() {
